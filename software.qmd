@@ -12,11 +12,11 @@ section-divs: false
 import yaml
 from IPython.display import display, Markdown, HTML
 
-def button(url, str, icon):
+def button(url, label, icon):
     icon_base = icon[:2]
-    return f"""<a class="btn btn-outline-dark btn-sm", href="{url}" target="_blank" rel="noopener noreferrer">
-        <i class="{icon_base} {icon}" role='img' aria-label='{str}'></i>
-        {str}
+    return f"""<a class="btn btn-outline-dark btn-sm" href="{url}" target="_blank" rel="noopener noreferrer">
+        <i class="{icon_base} {icon}" role='img' aria-label='{label}'></i>
+        {label}
     </a>"""
 
 yaml_data = yaml.safe_load(open("software.yaml"))
